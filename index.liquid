@@ -3,15 +3,43 @@ layout: base
 ---
 
 <header class="site-header">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quam animi possimus! Dolore labore animi laborum repellendus excepturi quaerat. Aut nihil dolorum nulla impedit, in dolorem vel eaque reprehenderit magni!
+<p>
+
+  “Stay in your ats” is a primary representation of my personal practice. The project is a reinterpretation of the events that took
+  place at Grenfell Tower, creating an abstract immersive experience that allows’s the audience to empathize with the content, nurturing their awareness of the wider issues, the social housing crisis, subcontracting work, risking lives of the lower classes and cover-ups. I have created an installation metaphorically representing the tragedy.
+</p>
+  <p>
+
+    Using textured tiles to create an interpretation of the events that took place,
+    primarily highlighting the key cause
+    of the tragedy, the non- reproof cladding.
+  </p>
+<p>
+
+  The work is focused on the audio track of the survivors rst accounts. The audience are placed within a dark room, using a 5.1 surround sound system to promote the voices affected by the tragedy, using online accounts from there three main characters, representing a narrative from three different viewpoints at one point in time,
+</p>
+  <p>
+
+    Using a cinematic approach, Folly effects slowly build creating tension to control the audience with speci c emotional reactions. The highs and lows of music composed by Ben Frost emphasize the dramatic effect. 
+    
+  </p>
 </header>
 
-<a-scene>
-    <a-assets timeout="12000">
-        <video id="tower" src="/assets/tower-small.mp4" autoplay="true"></video>
-      </a-assets>
-    <a-sky color="#111111"></a-sky>
-    <a-camera position='0 0 0'></a-camera>
-    <a-plane width='10' depth='10' position='0 0 0' rotation='90 0 0'></a-plane>
-    <a-box width='2' height='6' depth='2' material='repeat: 1; width: 1600; height: 800; src: #tower' position="5 0 3" rotation="0 0 0" color="#4CC3D9"></a-box>
+<a-scene fog="type: exponential; color: #000; density: .05">
+    <a-assets>
+        <img id="tex" src="/assets/texture.png">
+        <video id="vid" src="/assets/tower-small.mp4" autoplay loop muted></video>
+    </a-assets>
+
+    <a-entity light="type:point; castShadow:true; intensity: 2;" position="4 6 0"></a-entity>
+    <a-entity light="type:point; castShadow:true; intensity: 1.3;" position="-6 6 0"></a-entity>
+    <a-entity light="type:ambient;intensity: .3;"position="4 6 0"></a-entity>
+    
+    <a-camera position='5 1 0' rotation='0 0 0'></a-camera>
+    <a-sky color="#010201"></a-sky>
+    
+    <a-plane shadow="receive: true; cast: true" width='100' height='100' material='roughness: 0.96; color: #010101' position='0 0 0' rotation='-90 0 0'></a-plane>    
+
+    <a-entity light="type:point;intensity: 3; color: #ffffff"position="5 1 5"></a-entity>
+    <a-box shadow="cast: true; receive: true"  width='1.2' height='3' depth='1.2' material='shader: flat; src: #vid;' position="5 1.5 5" rotation="0 0 0" color="#ffffff"></a-box>
   </a-scene>

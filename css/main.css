@@ -1,13 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .site-header {
     position: fixed;
     top: 0;
     left: 0;
     color: white;
     z-index: 100;
-    width: 30rem;
+    width: 50rem;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1.2;
-    letter-spacing: .005em;
-    font-family: "Helvetica Now Micro";
+    transform: scaleX(.9);
+    font-family: "Helvetica Now Text";
+}
+.site-header p{
+    text-indent: 4em;
 }
