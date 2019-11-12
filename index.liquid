@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<header class="site-header">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quam animi possimus! Dolore labore animi laborum repellendus excepturi quaerat. Aut nihil dolorum nulla impedit, in dolorem vel eaque reprehenderit magni!
+</header>
+
+<a-scene>
+    <a-assets timeout="12000">
+        <video id="tower" src="/assets/tower-small.mp4" autoplay="true"></video>
+      </a-assets>
+    <a-sky color="#111111"></a-sky>
+    <a-camera position='0 0 0'></a-camera>
+    <a-plane width='10' depth='10' position='0 0 0' rotation='90 0 0'></a-plane>
+    <a-box width='2' height='6' depth='2' material='repeat: 1; width: 1600; height: 800; src: #tower' position="5 0 3" rotation="0 0 0" color="#4CC3D9"></a-box>
+  </a-scene>

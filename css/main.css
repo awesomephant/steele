@@ -1,0 +1,13 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 100;
+    width: 30rem;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: .005em;
+    font-family: "Helvetica Now Micro";
+}
